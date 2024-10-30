@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <h1>Resume Builder</h1>
+    <fieldset id="personal-detail">
+        <h2>Personal Details</h2>
+        <p>First Name: <br>
+            <input type="text" name="firstname" placeholder="Enter your first name" required>
+        </p>
+        <p>Last Name: <br>
+            <input type="text" name="lastname" placeholder="Enter your last name" required>
+        </p>
+        <p>Email: <br>
+            <input type="email" name="email" placeholder="Email address" required>
+        </p>
+        <p>Upload Picture:
+            <input type="file" name="dp" id="profile-pic" accept="image/*">
+        </p>
+        <p>Nationality:
+            <select name="countries" required>
+                <option value="pakistan">Pakistan</option>
+                <option value="india">India</option>
+                <option value="england">England</option>
+                <option value="saudi-arab">Saudi Arabia</option>
+            </select>
+        </p>
+    </fieldset>
+
+    <fieldset id="education">
+        <h2>Education</h2>
+        <p>Education: <br>
+            <input type="text" name="education_level" placeholder="Education" required>
+        </p>
+        <p>Degree/Field: <br>
+            <input type="text" name="degree" placeholder="Degree or Field">
+        </p>
+        <p>Institution: <br>
+            <input type="text" name="institution" placeholder="Institution">
+        </p>
+        <p>Year: <br>
+            <input type="number" name="year" placeholder="Year">
+        </p>
+    </fieldset>
+
+    <fieldset id="work-experience">
+        <h2>Work Experience</h2>
+        <div class="experience">
+            <p>Job Title: <br>
+                <input type="text" name="job[]" placeholder="Job Title">
+            </p>
+            <p>Company: <br>
+                <input type="text" name="company[]" placeholder="Company">
+            </p>
+            <p>Year: <br>
+                <input type="number" name="jobyear[]" placeholder="Year">
+            </p>
+            <p>Description: <br>
+                <textarea name="description[]" placeholder="Experience description"></textarea>
+            </p>
+        </div>
+        <button type="button" onclick="addExperience()">Add More Experience</button>
+    </fieldset>
+
+    <fieldset id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>Skill: <br>
+                <input type="text" name="skill[]" placeholder="Any skill">
+            </p>
+        </div>
+        <button type="button" onclick="addSkill()">Add More Skill</button>
+    </fieldset>
+
+    <button onclick="generateResume()">Generate Resume</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <button onclick="shareResume()">Share Resume</button>
+
+    <div id="resume" style="display:none;"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

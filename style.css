@@ -1,0 +1,48 @@
+
+body{
+    background-color:gray;
+}
+h1{
+    text-align: center;
+    color:#2a3d45
+    
+}
+h2{
+    text-align: center;
+    background-color: gray;
+    color:#2a3d45;
+    margin-top: auto;
+}
+        button {
+            margin-top: 10px;
+        }
+
+        #resume {
+            margin-top: 20px;
+            border: 1px solid #000;
+            padding: 10px;
+            display: none;
+        }
+#personal-detail{
+  background-color:palevioletred;
+}
+
+#education{
+    background-color:palevioletred;
+}
+#work-experience{
+    background-color: palevioletred;
+}
+#skills{
+    background-color: palevioletred;
+}
+input{
+    margin: 10px;
+    color: black;
+    padding: auto;
+    background-color: silver
+}
+button{
+    background-color:pink;
+    color: black;
+}
